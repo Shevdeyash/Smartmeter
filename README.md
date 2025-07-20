@@ -10,6 +10,8 @@ This SmartMeter project was developed during a hackathon to address modern energ
 
 The project uniquely features a **hidden, compact meter box** that sits behind switchboards and monitors connected appliances. This allows precise appliance-level tracking, distinguishing it from many generic smart meters in the market.
 
+ This repo doesn't consist of the entire project work/code for security reasons but would provide u the base design were u could show your creativity and talent.
+
 ---
 
 ## 🚀 Features
@@ -27,19 +29,12 @@ The project uniquely features a **hidden, compact meter box** that sits behind s
 
 | Component            | Technology Used        |
 |---------------------|------------------------|
-| Hardware            | ESP32/ESP8266, CT Sensors, Relays |
+| Hardware            | ESP32/ESP8266, Current & VoltageT Sensors, Relays |
 | Backend (Realtime)  | Firebase Realtime DB & Auth |
 | Frontend            | HTML, CSS, JavaScript  |
-| Hosting             | Firebase Hosting (optional) |
 | Communication       | HTTP/REST or MQTT (based on version) |
 
----
 
-## 📸 UI & Hardware Preview
-
-> ⚠️ Preview images or videos can be added here if you're okay sharing.
-
----
 
 ## 🔧 Installation & Setup
 
