@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Mirror - Settings</title>
+
+  <!-- Common Sidebar & Layout CSS -->
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/settings.css" />
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="brand">
+      <img src="../images/logo.png" alt="Logo" class="brand-logo" />
+      <h2>SmartMeter</h2>
+    </div>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="consumption.html">Consumption</a>
+    <a href="appliances.html">Appliances</a>
+    <a href="settings.html" class="active">Settings</a>
+    <a href="../index.html">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content fade-in">
+    <h1>Settings</h1>
+
+    <!-- Profile Settings -->
+    <div class="settings-section">
+      <h2>Profile</h2>
+      <div class="profile-info">
+        <img src="../images/user-pic.png" alt="Profile Picture" id="profilePic">
+        <input type="file" id="uploadProfilePic" accept="image/*">
+        <label for="uploadProfilePic" class="upload-btn">Change Profile Picture</label>
+      </div>
+      <input type="text" id="username" placeholder="Change Username">
+      <input type="email" id="email" placeholder="Change Email">
+      <button class="save-btn">Save Changes</button>
+    </div>
+
+    <!-- Theme Settings -->
+    <div class="settings-section">
+      <h2>Theme Customization</h2>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span>Dark Mode</span>
+    </div>
+
+    <!-- Security Settings -->
+    <div class="settings-section">
+      <h2>Security</h2>
+      <input type="password" id="newPassword" placeholder="Change Password">
+      <button class="save-btn">Update Password</button>
+      <br>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="settings-section">
+      <h2>Notifications</h2>
+      <label>
+        <input type="checkbox" id="emailNotifications"> Email Notifications
+      </label>
+      <label>
+        <input type="checkbox" id="smsNotifications"> SMS Notifications
+      </label>
+    </div>
+
+    <!-- Account Actions -->
+    <div class="settings-section">
+      <h2>Account</h2>
+      <button class="danger-btn">Delete Account</button>
+      <button class="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <!-- Common JS for sidebar toggle -->
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>

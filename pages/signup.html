@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Smart Meter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/signup.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>  
+</head>
+<body>
+  <div class="signup-wrapper">
+    <div class="signup-container">
+      <h1>Join SmartMeter</h1>
+      <form id="signupForm">
+        <div class="input-group">
+          <input type="text" id="fullName" required placeholder=" " />
+          <label for="fullName">Full Name</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required placeholder=" " />
+          <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" required placeholder=" " />
+          <label for="password">Password</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="confirmPassword" required placeholder=" " />
+          <label for="confirmPassword">Confirm Password</label>
+        </div>
+        <button type="submit">Create Account</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+  </div>
+  <script src="../js/signup.js"></script>
+</body>
+</html>

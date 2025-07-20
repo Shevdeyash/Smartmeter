@@ -1,0 +1,269 @@
+.main-content {
+    margin-left: 250px;              
+    padding: 30px 20px;
+    box-sizing: border-box;
+    max-width: calc(100% - 250px);
+    background: var(--bg-light);
+  }
+  
+  /* Sidebar-toggle btn*/
+  .toggle-sidebar {
+    display: none;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background: var(--primary);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    padding: 4px 8px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  /* Page Header “Card” */
+  .main-content .page-header {
+    background: linear-gradient(120deg, #85d2ec 0%, #7db7e0 100%);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  .main-content .page-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    animation: bounceIn 0.8s ease-in-out;
+  }
+  .main-content .page-header p {
+    margin-top: 8px;
+    color: #666;
+    font-size: 16px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  /* Fallback Title */
+  .main-content h1 { font-size: 28px; margin-bottom: 8px; color: var(--text-dark); }
+  .main-content p  { font-size: 16px; margin-bottom: 24px; color: #555; }
+  
+  /* Devices Container Card */
+  .devices-container {
+    background: var(--bg-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  /* Section Header */
+  .devices-container h2      { font-size: 22px; margin-bottom: 6px; color: var(--primary-dark); }
+  .devices-container > p     { margin-bottom: 20px; color: #666; }
+  .table-responsive    { overflow-x: auto; margin-bottom: 20px; }
+  .table-responsive::-webkit-scrollbar       { height: 6px; }
+  .table-responsive::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
+  
+  /* Devices Table */
+  .devices-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  .devices-table th,
+  .devices-table td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  .devices-table th {
+    background: var(--primary);
+    color: var(--text-light);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+  }
+  .devices-table tr:nth-child(even) {
+    background: #fafafa;
+  }
+  
+  /* Status Pills */
+  .status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  .status.on {
+    background: var(--accent);
+    color: var(--text-light);
+    box-shadow: 0 0 5px rgba(0,200,83,0.4);
+  }
+  .status.off {
+    background: var(--danger);
+    color: var(--text-light);
+    box-shadow: 0 0 5px rgba(255,0,0,0.4);
+  }
+  .status:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Row Buttons */
+  .toggle-btn {
+    background: var(--primary);
+    color: var(--text-light);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+  }
+  .toggle-btn:hover {
+    transform: translateY(-2px);
+    background: var(--primary-dark);
+  }
+  
+  /* Bulk Buttons */
+  .device-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .add-btn,
+  .remove-btn {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  .add-btn {
+    background: var(--accent);
+    color: var(--text-light);
+  }
+  .add-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,200,83,0.4);
+  }
+  .remove-btn {
+    background: var(--danger);
+    color: var(--text-light);
+  }
+  .remove-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255,0,0,0.4);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(15px);} to { opacity:1; transform: translateY(0);} }
+  @keyframes fadeIn   { from { opacity: 0; transform: translateY(-10px);} to { opacity:1; transform: translateY(0);} }
+  @keyframes bounceIn {
+    0%   { transform: scale(0.8) translateY(-20px); opacity: 0; }
+    60%  { transform: scale(1.1) translateY(10px); opacity: 1; }
+    100% { transform: scale(1) translateY(0); }
+  }
+  
+  /* ------------------------------------ */
+  /* Responsive Breakpoints               */
+  /* ------------------------------------ */
+  @media (max-width: 1024px) {
+    .devices-container {
+      padding: 20px;
+    }
+    .devices-table th,
+    .devices-table td {
+      padding: 12px 8px;
+    }
+    .main-content {
+      padding: 20px 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    /* Sidebar off-canvas & hamburger on */
+    .sidebar {
+      display: none;
+      transition: transform 0.3s ease;
+      z-index: 1000; 
+    }
+    .toggle-sidebar {
+      display: block;
+    }
+    @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+      
+        .toggle-sidebar {
+          display: block;         /* show our hamburger */
+          position: fixed;
+          top: 16px;
+          left: 16px;
+          z-index: 1100;          /* above the sidebar */
+          background: var(--primary);
+          color: var(--text-light);
+          border: none;
+          border-radius: 4px;
+          padding: 6px 10px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+  }
+  
+    /* Main content full width */
+    .main-content {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  
+    /* Devices container tighter */
+    .devices-container {
+      margin: 0 0 30px;
+      padding: 16px;
+    }
+    .devices-container h2 {
+      font-size: 20px;
+    }
+  
+    /* Table stretches to full width, scrolls horizontally */
+    .devices-table {
+      min-width: 100%;
+    }
+    .devices-table th {
+      font-size: 14px;
+      padding: 10px 6px;
+    }
+    .devices-table td {
+      font-size: 14px;
+      padding: 8px 6px;
+    }
+  
+    /* Stack Add/Remove buttons vertically */
+    .device-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .device-buttons .add-btn,
+    .device-buttons .remove-btn {
+      width: 100%;
+      margin: 6px 0;
+    }
+  }
+  

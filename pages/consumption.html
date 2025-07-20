@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartWatts - Consumption</title>
+  <!-- Common Sidebar/Layout CSS -->
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <!-- Consumption-Specific CSS -->
+  <link rel="stylesheet" href="../css/consumption.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- jsPDF autoTable plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+  <!-- Firebase and Chart.js Scripts (if needed) -->
+  <script type="module" src="../js/firebase.js"></script>
+  <script type="module" src="../js/consumption.js"></script>
+</head>
+
+        <!-- For harware software refer youtube as i havent uploaded that part -->
+<body>
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="brand">
+      <img src="../images/logo.png" alt="Logo" class="brand-logo" />
+      <h2>SmartWatts</h2>
+    </div>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="consumption.html" class="active">Consumption</a>
+    <a href="appliances.html">Appliances</a>
+    <a href="settings.html">Settings</a>
+    <a href="../index.html">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content fade-in">
+
+    <!-- Page Header -->
+    <div class="page-header card">
+      <h1>Real-Time Sensor Data</h1>
+      <p>Monitor overall sensor readings and individual socket data in real time.</p>
+    </div>
+
+    <!-- Global Total Data Grid -->
+    <div class="total-section">
+      <div class="total-card">
+        <h3>Total Voltage</h3>
+        <p id="total-voltage-value">Loading...</p>
+      </div>
+      <div class="total-card">
+        <h3>Total Current</h3>
+        <p id="total-current-value">Loading...</p>
+      </div>
+    </div>    
+
+    <!-- Socket Data Section -->
+    <div class="socket-data">
+      <h2>Socket Data</h2>
+      <div class="socket-section">
+        <div class="socket-card" id="socket1">
+          <h3>Socket 1</h3>
+          <p>Voltage: <span id="socket1-voltage">Loading...</span></p>
+          <p>Current: <span id="socket1-current">Loading...</span></p>
+          <p>Power: <span id="socket1-power">Loading...</span></p>
+          <p>Cost: <span id="socket1-cost">Loading...</span></p>
+        </div>
+        <div class="socket-card" id="socket2">
+          <h3>Socket 2</h3>
+          <p>Voltage: <span id="socket2-voltage">Loading...</span></p>
+          <p>Current: <span id="socket2-current">Loading...</span></p>
+          <p>Power: <span id="socket2-power">Loading...</span></p>
+          <p>Cost: <span id="socket2-cost">Loading...</span></p>
+        </div>
+        <div class="socket-card" id="socket3">
+          <h3>Socket 3</h3>
+          <p>Voltage: <span id="socket3-voltage">Loading...</span></p>
+          <p>Current: <span id="socket3-current">Loading...</span></p>
+          <p>Power: <span id="socket3-power">Loading...</span></p>
+          <p>Cost: <span id="socket3-cost">Loading...</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estimated Cost Box -->
+    <div class="estimated-cost-box dashboard-card">
+      <h2>Estimated Monthly Cost</h2>
+      <p class="cost-value">₹ <span id="estimated-cost">0.00</span></p>
+      <button id="download-invoice-btn">Download Invoice</button>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="chart-section">
+      <!-- Line Chart Card -->
+      <div class="chart-card">
+        <h2>Weekly Energy Consumption (Day vs Night)</h2>
+        <canvas id="weeklyEnergyChart"></canvas>
+      </div>
+
+      <!-- Pie Chart Card -->
+      <div class="chart-card">
+        <h2>Appliance-wise Usage</h2>
+        <canvas id="appliancePieChart"></canvas>
+      </div>
+    </div>
+
+  </div> <!-- end .main-content -->
+  
+</body>
+</html>

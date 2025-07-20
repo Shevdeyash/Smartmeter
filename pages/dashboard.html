@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartWatts Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/dashboard.js" defer></script>
+</head>
+
+        <!-- This code doenst has complete code for security reasons so explore yourself-->
+<body>
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="brand">
+      <img src="../images/logo.png" alt="Logo" class="brand-logo" />
+      <h2>SmartWatts</h2>
+    </div>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="consumption.html">Consumption</a>
+    <a href="appliances.html">Appliances</a>
+    <a href="settings.html">Settings</a>
+    <a href="../index.html">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <h1>Welcome to Your SmartWatts Dashboard</h1>
+      <p>Manage your devices, monitor usage, and stay informed at a glance.</p>
+    </header>
+
+    <!-- Two-Column Layout -->
+    <div class="two-column-layout">
+      <!-- Left Column -->
+      <div class="left-column">
+        <!-- User Profile Card -->
+        <div class="card" id="user-profile">
+          <h3>User Profile</h3>
+          <div class="profile-details">
+            <img src="../images/user-pic.png" alt="User Avatar" class="avatar" />
+            <div class="profile-info">
+              <p class="username">Yash Shevde</p>
+              <p class="subscription">Premium Plan (Exp: 12/2030)</p>
+              <p class="last-login">Last Login: 3 mins ago</p>
+              <div class="usage-stat">
+                <p>This Month's Usage: <span>80%</span></p>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 80%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="settings.html" class="btn" id="manage-profile-btn">Manage Profile</a>
+        </div>
+
+        <!-- System Health Card -->
+        <div class="card" id="system-health">
+          <h3>System Health</h3>
+          <div class="system-status">
+            <div class="status-item">
+              <span class="sensor-icon">&#128421;</span>
+              <span class="sensor-name">Main Meter</span>
+              <span class="status badge healthy">Active</span>
+            </div>
+            <div class="status-item">
+              <span class="sensor-icon">&#9889;</span>
+              <span class="sensor-name">Voltage Sensor</span>
+              <span class="status badge warning">Inactive</span>
+            </div>
+            <div class="status-item">
+              <span class="sensor-icon">&#127777;</span>
+              <span class="sensor-name">Current Sensor</span>
+              <span class="status badge warning">Inactive</span>
+            </div>
+            <p class="last-check">Last Check: 3 mins ago</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <div class="card small-card" id="performance-card">
+          <h3>Performance</h3>
+          <div class="performance-info">
+            <p>Website Performance Metrics</p>
+            <div id="performance-panel">
+              <canvas id="performanceGauge" width="200" height="200"></canvas>
+              <div id="performance-metrics">
+                <p id="loadSpeed">Load Speed: 0.0s</p>
+                <p id="responsiveness">Responsiveness: 0%</p>
+                <p id="latency">Latency: 0ms</p>
+              </div>
+            </div>
+            <div class="extra-metrics">
+              <p><strong>Requests/sec:</strong> <span id="reqSec">N/A</span></p>
+              <p><strong>Error Rate:</strong> <span id="errorRate">N/A</span></p>
+              <p><strong>Memory Usage:</strong> <span id="memoryUsage">N/A</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- ─── Chatbot Widget ─────────────────────────────────────────── -->
+<!--- <div id="chatbot-container" class="closed">
+  <button id="chatbot-toggle" aria-label="Toggle chat">
+    <img src="../images/robo2.gif" alt="Bot Idle" id="avatar-idle" />
+    <img src="../images/robo1.gif" alt="Bot Hello" id="avatar-hello" />
+  </button>
+
+  <div id="chatbot-window">
+    <div class="chat-header">
+      <img src="../images/robo1.gif" alt="Bot Hello" class="header-avatar" />
+      <span class="header-title">Energy Bot</span>
+      <button id="chatbot-close" aria-label="Close chat">✖︎</button>
+    </div>
+
+    <div id="chatbot-messages"></div>
+
+    <div class="chat-input">
+      <input type="text" id="chat-input-field" placeholder="Type a message…" />
+      <button id="chat-send" aria-label="Send message">➤</button>
+    </div>
+  </div>
+</div>  -->
+
+</body>
+</html>

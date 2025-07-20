@@ -1,0 +1,181 @@
+/* 
+  Basic reset and background 
+  (You can change the gradient if you like) 
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #2f80ed, #56ccf2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* 
+    Main page container 
+  */
+  .login-page {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  /* 
+    Image container 
+    -- IMPORTANT: We add perspective here for 3D rotation 
+    -- The lines below must remain unchanged for size, 
+       except for adding perspective
+  */
+  .login-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px; /* <-- Key for 3D parallax effect */
+  }
+  
+  .login-image img {
+    width: 80%; 
+    height: auto;
+    object-fit: contain;
+    transform-style: preserve-3d; /* needed for 3D transforms */
+  }
+  
+  /* 
+    Right side: Login form 
+  */
+  .login-form {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .login-title {
+    font-family: "Berkshire Swash", cursive;
+    font-size: 2.5em;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 1em;
+  }
+  
+  /* 
+    Toggle password eye icon 
+  */
+  .password-group {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+    font-size: 1.1em;
+  }
+  
+  /* 
+    Submit button 
+  */
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #4caf50, #66bb6a);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 
+    Form footer 
+  */
+  .login-form p {
+    margin-top: 20px;
+    text-align: center;
+    color: #003366;
+  }
+  
+  .login-form p a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* 
+    Responsive for small screens 
+  */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+    .login-image {
+      display: none; /* Hide image if desired on mobile */
+    }
+  }
+
+.google-btn {
+    background: #ffffff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .google-btn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .google-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  

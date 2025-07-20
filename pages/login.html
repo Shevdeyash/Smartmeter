@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Smart Meter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/login.css" />
+
+  <!-- GSAP for Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Firebase SDK (v9 for modular) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js" type="module"></script>
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-container">
+      <!-- Left: Image container -->
+      <div class="login-image">
+        <img src="../images/login-img.png" alt="Login Illustration" id="loginImg" />
+      </div>
+
+      <!-- Right: Login form -->
+      <div class="login-form">
+        <h1 class="login-title">Welcome Back</h1>
+        <form id="loginForm">
+          <div class="input-group">
+            <input type="text" placeholder="Username" required />
+          </div>
+          <div class="input-group password-group">
+            <input type="password" placeholder="Password" id="passwordInput" required />
+            <span class="toggle-password" onclick="togglePassword()">
+              <i class="fa fa-eye" id="eyeIcon"></i>
+            </span>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+
+        <p>Or</p>
+
+        <button id="googleSignIn" class="google-btn">
+          <img src="../images/google-logo.png" alt="Google Logo"> Sign in with Google
+        </button>
+
+        <p>New User? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- Your Modules -->
+  <script type="module" src="../js/login.js"></script>
+</body>
+</html>

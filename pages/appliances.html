@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartMeter – Appliances</title>
+
+  <!-- Firebase & jQuery -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="../css/appliances.css" />
+</head>
+<body class="flex">
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="brand">
+      <img src="../images/logo.png" alt="Logo" class="brand-logo" />
+      <h2>SmartMeter</h2>
+    </div>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="consumption.html">Consumption</a>
+    <a href="appliances.html" class="active">Appliances</a>
+    <a href="settings.html">Settings</a>
+    <a href="../index.html">Logout</a>
+  </div>
+
+  <!-- Hamburger (mobile) -->
+  <button id="sidebarToggle" class="toggle-sidebar">☰</button>
+
+  <!-- Main Content -->
+  <div class="main-content fade-in">
+    <!-- Header Card -->
+    <div class="page-header">
+      <h1>Manage Appliances</h1>
+      <p>Monitor and control your connected appliances in real-time.</p>
+    </div>
+
+    <!-- Devices Container -->
+    <div class="devices-container">
+      <h2>Connected Devices</h2>
+      <p>Below is a list of appliances currently connected to your SmartMeter.</p>
+
+      <!-- Responsive Table -->
+      <div class="table-responsive">
+        <table class="devices-table">
+          <thead>
+            <tr>
+              <th>Select</th>
+              <th>Appliance Name</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="applianceList">
+            <!-- Rows will be injected by appliances.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bulk Actions -->
+      <div class="device-buttons">
+        <button class="add-btn" id="addApplianceBtn">➕ Add New Appliance</button>
+        <button class="remove-btn" id="removeApplianceBtn">🗑️ Remove Selected</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  Your existing JS files -->
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/appliances.js"></script>
+</body>
+</html>
+,ṁju
