@@ -43,6 +43,9 @@ The project uniquely features a **hidden, compact meter box** that sits behind s
 2. Integrate relay modules for appliance control.
 3. Upload firmware (e.g., using Arduino IDE) that sends data to Firebase.
 
+👏 Credits
+Built with passion during a hackathon by Master Yash and his team.
+
 ### 🌐 Web Dashboard
 1. Clone this repository:
    ```bash
